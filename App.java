@@ -1,12 +1,18 @@
-package com.example;
+public class ReverseNumber {
 
-public class App {
+    public static int reverse(int number) {
+        int reversed = 0;
 
-    public static int add(int a, int b) {
-        return a + b;
+        while (number != 0) {
+            int digit = number % 10;
+            reversed = reversed * 10 + digit;
+            number = number / 10;
+        }
+
+        return reversed;
     }
 
     public static void main(String[] args) {
-        System.out.println("Sum = " + add(10, 20));
+        System.out.println(reverse(1234));
     }
 }
